@@ -1,4 +1,4 @@
-Server: Aragog @10:26
+Server Aragog @10:26
 
 modify the post from this:
 <details>
@@ -25,4 +25,8 @@ or to this:
 Then take encoded-output (clipboard) and do this:
 echo -n "encoded-output from clipboard) | base64 -d
 
-  
+--------------------------------------------------------------------------------  
+Server Aragog @13:18
+Use this LFI file to enumerate with Burp Suite Intruder
+https://github.com/D35m0nd142/LFISuite/blob/master/pathtotest.txt
+
